@@ -9,40 +9,69 @@
 #import "NoteEditorViewController.h"
 #import "Note.h"
 #import "TimeIndicatorView.h"
+#import "SyntaxHighlightTextStorage.h"
 
 @interface NoteEditorViewController () <UITextViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+
 
 @end
 
 @implementation NoteEditorViewController
 {
     TimeIndicatorView* _timeView;
+    SyntaxHighlightTextStorage* _textStorage;
+    UITextView* _textView;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.textView.text = self.note.contents;
-    self.textView.delegate = self;
-    //self.textView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+  
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(preferredContentSizeChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil ];
-    
+     [self createTextView];
     _timeView = [[TimeIndicatorView alloc] init:self.note.timestamp];
     [self.view addSubview:_timeView];
+    
 }
+
+- (void)createTextView {
+    NSDictionary *attrs = @{NSFontAttributeName:
+                                [UIFont preferredFontForTextStyle:UIFontTextStyleBody]};
+    NSAttributedString* attrString = [[NSAttributedString alloc] initWithString:_note.contents attributes:attrs];
+    _textStorage = [SyntaxHighlightTextStorage new];
+    [_textStorage appendAttributedString:attrString];
+    CGRect newTextViewRect = self.view.bounds;
+    NSLayoutManager *layoutManager = [[NSLayoutManager alloc] init];
+    CGSize containerSize = CGSizeMake(newTextViewRect.size.width, CGFLOAT_MAX);
+    NSTextContainer *container = [[NSTextContainer alloc] initWithSize:containerSize];
+   // container.widthTracksTextView = NO;
+    [layoutManager addTextContainer:container]; [_textStorage addLayoutManager:layoutManager];
+    _textView = [[UITextView alloc] initWithFrame:newTextViewRect
+                                    textContainer:container];
+    _textView.delegate = self;
+    [self.view addSubview:_textView];
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    _textView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 216.0f);
+
+    
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    self.note.contents = textView.text;
+    
+    _textView.frame = self.view.bounds;
+}
+
 - (void)preferredContentSizeChanged:(NSNotification *) notification {
-    self.textView.font =
+    _textView.font =
     [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     [self updateTimeIndicatorFrame];
 }
-- (void)textViewDidEndEditing:(UITextView *)textView
-{
-    // copy the updated note text to the underlying model.
-    self.note.contents = textView.text;
-}
+ 
 
 - (void)viewDidLayoutSubviews {
     [self updateTimeIndicatorFrame];
