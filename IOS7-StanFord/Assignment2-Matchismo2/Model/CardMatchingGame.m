@@ -11,8 +11,9 @@
 @interface CardMatchingGame ()
 @property (nonatomic, readwrite) NSInteger score;
 @property (nonatomic, strong) NSMutableArray *cards;
+@property (nonatomic, readwrite)  NSInteger *valueMatchedPoint;
 @end
-static const int MISMATCH_PENALTY = 2;
+static const NSInteger MISMATCH_PENALTY = 2;
 static const int Match_BONUS = 4;
 static const int Cost_To_Choose = 1;
 @implementation CardMatchingGame
@@ -26,7 +27,6 @@ static const int Cost_To_Choose = 1;
 
 - (instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck {
     self = [super init];
-    
     if (self) {
         for (int i = 0; i < count; i++) {
             Card *drawCard = [deck drawRandomCard];
@@ -44,25 +44,43 @@ static const int Cost_To_Choose = 1;
 
 - (void)chooseCardAtIndex:(NSUInteger)index {
     Card *card =[self cardAtIndex:index];
+    NSLog(@"%lu",self.gameCardMode);
     if (!card.matched) {
         if (card.isChosen) {
             card.chosen = NO;
         } else {
+            NSMutableArray *myCardArray = [[NSMutableArray alloc]init];
             for (Card *otherCard in self.cards) {
                 if (otherCard.isChosen && !otherCard.isMatched) {
-                    int matchScore = [card match:@[otherCard]
-                                      ];
-                    if (matchScore) {
-                        self.score += matchScore * Match_BONUS;
-                        otherCard.matched = YES;
-                        card.matched = YES;
-                    } else {
-                        otherCard.chosen = NO;
-                        self.score -= MISMATCH_PENALTY;
+                    
+                    [myCardArray addObject:otherCard];
+                    
+                    if ([myCardArray count] == self.gameCardMode) {
+                        NSLog(@"mycard count%lu",[myCardArray count]);
+                        int matchScore = [card match:myCardArray
+                                          ];
+                        if (matchScore) {
+                            self.score += matchScore * Match_BONUS;
+                            otherCard.matched = YES;
+                            for (Card *gameModeCard  in myCardArray ) {
+                                gameModeCard.matched = YES;
+                            }
+                            self.valueMatchedPoint = matchScore * Match_BONUS;
+                            card.matched = YES;
+                        } else {
+                            for (Card *gameModeCard  in myCardArray ) {
+                                gameModeCard.chosen = NO;
+                            }
+                            self.score -= MISMATCH_PENALTY;
+                            self.valueMatchedPoint = - MISMATCH_PENALTY;
+                        }
+                        break;
+                        
                     }
-                    break;
+                    
                 }
             }
+            
             self.score -= Cost_To_Choose;
             card.chosen = YES;
         }
