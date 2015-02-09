@@ -48,6 +48,11 @@
             NSString *drawCardContent = drawCard.contents;
             [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"] forState:UIControlStateNormal];
             [sender setTitle:drawCardContent forState:UIControlStateNormal];
+            if ([drawCardContent containsString:@"♥︎"]||[drawCardContent containsString:@"♦︎"]) {
+                [sender setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+            }else {
+                [sender setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            }
             
             self.flipCount++ ;
         }
