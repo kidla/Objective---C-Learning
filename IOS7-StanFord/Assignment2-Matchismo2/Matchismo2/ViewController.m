@@ -70,6 +70,8 @@
         self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d",self.game.score];
         if (_game.valueMatchedPoint) {
             self.resultLabel.text = [NSString stringWithFormat:@"result:%@",_game.valueMatchedPoint];
+        } else {
+            self.resultLabel.text = @"Ready!";
         }
     }
 }
@@ -94,6 +96,13 @@
      self.segmentedControl.enabled = YES;
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    NSArray *s =@[@"AAA"];
+    id objtest = s;
+    NSArray *a = objtest;
+    NSLog(@"%@",a);
+}
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     NSLog(@"segment%lu",self.segmentedControl.selectedSegmentIndex);
