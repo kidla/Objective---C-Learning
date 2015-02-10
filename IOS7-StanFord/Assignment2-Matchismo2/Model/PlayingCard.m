@@ -16,7 +16,7 @@
 }
 
 + (NSArray *)validSuits {
-    return @[@"♥︎",@"♦︎",@"♠︎",@"♣︎"];
+    return @[@"♥", @"♦", @"♣", @"♠"];
 }
 
 + (NSArray *)rankStrings {
@@ -28,27 +28,51 @@
 
 - (int)match:(NSArray *)otherCards {
     int score = 0;
-    if ([otherCards count] == 1) {
-        PlayingCard *otherCard = [otherCards firstObject];
-        NSLog(@"rank%lu",self.rank);
-        NSLog(@"otherrank%lu",otherCard.rank);
-        if (otherCard.rank == self.rank) {
-            score = 4;
-        } else if ([otherCard.suit isEqualToString:self.suit]) {
-            score = 1;
-        }
-    } else {
-        NSMutableSet *myRankCardSet = [NSMutableSet setWithObject:[NSString stringWithFormat:@"%lu",self.rank]];
-        NSMutableSet *mySuitCardSet = [NSMutableSet setWithObject:self.suit];
-        for (PlayingCard *otherCard in otherCards) {
-        
-            [myRankCardSet addObject:[NSString stringWithFormat:@"%lu",otherCard.rank]];
-            [mySuitCardSet addObject:otherCard.suit];
+    
+    //2 Cards Model
+    PlayingCard *otherCard = [otherCards firstObject];
+    NSLog(@"rank%lu",self.rank);
+    NSLog(@"otherrank%lu",otherCard.rank);
+    if (otherCard.rank == self.rank) {
+        score = 4;
+    } else if ([otherCard.suit isEqualToString:self.suit]) {
+        score = 1;
+    }
+    
+    //    if ([otherCards count] == 1) {
+    //        PlayingCard *otherCard = [otherCards firstObject];
+    //        NSLog(@"rank%lu",self.rank);
+    //        NSLog(@"otherrank%lu",otherCard.rank);
+    //        if (otherCard.rank == self.rank) {
+    //            score = 4;
+    //        } else if ([otherCard.suit isEqualToString:self.suit]) {
+    //            score = 1;
+    //        }
+    //    } else {
+    //        NSMutableSet *myRankCardSet = [NSMutableSet setWithObject:[NSString stringWithFormat:@"%lu",self.rank]];
+    //        NSMutableSet *mySuitCardSet = [NSMutableSet setWithObject:self.suit];
+    //        for (PlayingCard *otherCard in otherCards) {
+    //
+    //            [myRankCardSet addObject:[NSString stringWithFormat:@"%lu",otherCard.rank]];
+    //            [mySuitCardSet addObject:otherCard.suit];
+    //            }
+    //        NSLog(@"set Suit count%lu",[mySuitCardSet count]);
+    //        NSLog(@"set Rank count%lu",[myRankCardSet count]);
+    //        if (([myRankCardSet count] + [mySuitCardSet count]) <= 4) {
+    //            score = 5;
+    //        }
+    //    }
+    
+    // N - Cards Model
+    NSMutableArray *otherCardsCollectionForCompare = [otherCards mutableCopy];
+    for (PlayingCard *otherCard in otherCards) {
+        [otherCardsCollectionForCompare removeObject:otherCard];
+        for (PlayingCard *otherCardsCollection in otherCardsCollectionForCompare) {
+            if (otherCard.rank == otherCardsCollection.rank) {
+                score +=4;
+            } else if ([otherCard.suit isEqualToString:otherCardsCollection.suit]){
+                score +=1;
             }
-        NSLog(@"set Suit count%lu",[mySuitCardSet count]);
-        NSLog(@"set Rank count%lu",[myRankCardSet count]);
-        if (([myRankCardSet count] + [mySuitCardSet count]) <= 4) {
-            score = 5;
         }
     }
     
@@ -68,7 +92,7 @@
 
 - (void)setSuit:(NSString *)suit {
     if ([[PlayingCard validSuits] containsObject:suit ]) {
-         _suit = suit;
+        _suit = suit;
     }
 }
 

@@ -14,7 +14,7 @@
 
 @property (nonatomic, readonly) NSInteger score;
 @property (nonatomic, assign) NSUInteger gameCardMode;
-@property (nonatomic, readonly) NSInteger *valueMatchedPoint;
+@property (nonatomic, readonly) NSString *valueMatchedPoint;
 - (instancetype)initWithCardCount:(NSUInteger)count usingDeck:(Deck *)deck;
 - (void)chooseCardAtIndex:(NSUInteger)index;
 - (Card *)cardAtIndex:(NSInteger)index;

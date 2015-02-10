@@ -61,9 +61,15 @@
         [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
         cardButton.enabled = !card.isMatched;
         
+        if ([cardButton.titleLabel.text containsString:@"♥︎"]||[cardButton.titleLabel.text containsString:@"♦︎"]) {
+            [cardButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        }else {
+            [cardButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        }
+
         self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d",self.game.score];
         if (_game.valueMatchedPoint) {
-            self.resultLabel.text = [NSString stringWithFormat:@"result:%d",_game.valueMatchedPoint];
+            self.resultLabel.text = [NSString stringWithFormat:@"result:%@",_game.valueMatchedPoint];
         }
     }
 }
