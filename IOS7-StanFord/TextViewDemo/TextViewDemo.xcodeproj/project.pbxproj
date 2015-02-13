@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0436F1AF1A8C6333001A9A41 /* TextAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0436F1AE1A8C6333001A9A41 /* TextAnalysisViewController.m */; };
 		04AF22E31A8B28D500F07EF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF22E21A8B28D500F07EF1 /* main.m */; };
 		04AF22E61A8B28D500F07EF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF22E51A8B28D500F07EF1 /* AppDelegate.m */; };
 		04AF22E91A8B28D500F07EF1 /* AttributorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF22E81A8B28D500F07EF1 /* AttributorViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0436F1AD1A8C6333001A9A41 /* TextAnalysisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextAnalysisViewController.h; path = ../TextAnalysisViewController.h; sourceTree = "<group>"; };
+		0436F1AE1A8C6333001A9A41 /* TextAnalysisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextAnalysisViewController.m; path = ../TextAnalysisViewController.m; sourceTree = "<group>"; };
 		04AF22DD1A8B28D500F07EF1 /* TextViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AF22E11A8B28D500F07EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04AF22E21A8B28D500F07EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,8 +84,8 @@
 		04AF22DF1A8B28D500F07EF1 /* TextViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				04AF22E41A8B28D500F07EF1 /* AppDelegate.h */,
-				04AF22E51A8B28D500F07EF1 /* AppDelegate.m */,
+				0436F1AD1A8C6333001A9A41 /* TextAnalysisViewController.h */,
+				0436F1AE1A8C6333001A9A41 /* TextAnalysisViewController.m */,
 				04AF22E71A8B28D500F07EF1 /* AttributorViewController.h */,
 				04AF22E81A8B28D500F07EF1 /* AttributorViewController.m */,
 				04AF22EA1A8B28D500F07EF1 /* Main.storyboard */,
@@ -96,6 +99,8 @@
 		04AF22E01A8B28D500F07EF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04AF22E41A8B28D500F07EF1 /* AppDelegate.h */,
+				04AF22E51A8B28D500F07EF1 /* AppDelegate.m */,
 				04AF22E11A8B28D500F07EF1 /* Info.plist */,
 				04AF22E21A8B28D500F07EF1 /* main.m */,
 			);
@@ -221,6 +226,7 @@
 				04AF22E91A8B28D500F07EF1 /* AttributorViewController.m in Sources */,
 				04AF22E61A8B28D500F07EF1 /* AppDelegate.m in Sources */,
 				04AF22E31A8B28D500F07EF1 /* main.m in Sources */,
+				0436F1AF1A8C6333001A9A41 /* TextAnalysisViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TextViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -353,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TextViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -411,6 +419,7 @@
 				04AF23021A8B28D500F07EF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04AF23031A8B28D500F07EF1 /* Build configuration list for PBXNativeTarget "TextViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +428,7 @@
 				04AF23051A8B28D500F07EF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

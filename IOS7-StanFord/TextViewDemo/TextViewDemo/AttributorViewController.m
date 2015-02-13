@@ -7,7 +7,7 @@
 //
 
 #import "AttributorViewController.h"
-
+#import "TextAnalysisViewController.h"
 @interface AttributorViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *headlineLabel;
 @property (weak, nonatomic) IBOutlet UITextView *bodyTextView;
@@ -17,6 +17,14 @@
 
 @implementation AttributorViewController
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString: @"analyzeSege"]) {
+        if ([segue.destinationViewController isKindOfClass:[TextAnalysisViewController class]]) {
+            TextAnalysisViewController *vc = (TextAnalysisViewController *)segue.destinationViewController;
+            vc.textToAnalyze = self.bodyTextView.textStorage;
+        }
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -25,12 +33,15 @@
     [title setAttributes:@{NSStrokeWidthAttributeName : @3 , NSStrokeColorAttributeName : self.outlineButton.tintColor} range:NSMakeRange(0, [title length])];
     //[self.outlineButton.titleLabel setAttributedText:title];
     [self.outlineButton setAttributedTitle:title forState:UIControlStateNormal];
+   
 
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     [self usePreferFont];
+    self.view.opaque = NO;
+    
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changePreferFont:) name:UIContentSizeCategoryDidChangeNotification object:nil];
 }
