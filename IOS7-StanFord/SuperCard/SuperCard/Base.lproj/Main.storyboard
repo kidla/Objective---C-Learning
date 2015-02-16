@@ -19,6 +19,10 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Md5-dr-YXo" customClass="PlayingCardView">
                                 <rect key="frame" x="65" y="124" width="245" height="349"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vhc-jl-v0k" appends="YES" id="5wz-ao-oM8"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.51372549020000002" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -29,6 +33,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="vhc-jl-v0k">
+                    <connections>
+                        <action selector="swipe:" destination="vXZ-lx-hvc" id="edi-Qz-5ue"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="297.5" y="346.5"/>
         </scene>
