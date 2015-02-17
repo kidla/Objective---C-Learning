@@ -18,7 +18,7 @@
 
 @implementation DropitViewController
 
-static const CGSize DROP_SIZE = { 40, 40 };
+static const CGSize DROP_SIZE = { 25, 40 };
 
 - (DropitBehavior *)dropitBehavior
 {
