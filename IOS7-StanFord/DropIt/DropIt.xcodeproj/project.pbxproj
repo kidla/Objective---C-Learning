@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		042148E31A91CEA400692351 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 042148E21A91CEA400692351 /* main.m */; };
 		042148E61A91CEA400692351 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 042148E51A91CEA400692351 /* AppDelegate.m */; };
-		042148E91A91CEA400692351 /* DropItViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042148E81A91CEA400692351 /* DropItViewController.m */; };
+		042148E91A91CEA400692351 /* DropitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042148E81A91CEA400692351 /* DropitViewController.m */; };
 		042148EC1A91CEA400692351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042148EA1A91CEA400692351 /* Main.storyboard */; };
 		042148EE1A91CEA400692351 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042148ED1A91CEA400692351 /* Images.xcassets */; };
 		042148F11A91CEA400692351 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042148EF1A91CEA400692351 /* LaunchScreen.xib */; };
 		042148FD1A91CEA400692351 /* DropItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 042148FC1A91CEA400692351 /* DropItTests.m */; };
-		042149081A91EDFE00692351 /* DropItBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 042149071A91EDFE00692351 /* DropItBehavior.m */; };
+		042149081A91EDFE00692351 /* DropitBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 042149071A91EDFE00692351 /* DropitBehavior.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,16 +33,16 @@
 		042148E21A91CEA400692351 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		042148E41A91CEA400692351 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		042148E51A91CEA400692351 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		042148E71A91CEA400692351 /* DropItViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropItViewController.h; sourceTree = "<group>"; };
-		042148E81A91CEA400692351 /* DropItViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropItViewController.m; sourceTree = "<group>"; };
+		042148E71A91CEA400692351 /* DropitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropitViewController.h; sourceTree = "<group>"; };
+		042148E81A91CEA400692351 /* DropitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropitViewController.m; sourceTree = "<group>"; };
 		042148EB1A91CEA400692351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		042148ED1A91CEA400692351 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		042148F01A91CEA400692351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		042148F61A91CEA400692351 /* DropItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		042148FB1A91CEA400692351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042148FC1A91CEA400692351 /* DropItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropItTests.m; sourceTree = "<group>"; };
-		042149061A91EDFE00692351 /* DropItBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropItBehavior.h; sourceTree = "<group>"; };
-		042149071A91EDFE00692351 /* DropItBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropItBehavior.m; sourceTree = "<group>"; };
+		042149061A91EDFE00692351 /* DropitBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropitBehavior.h; sourceTree = "<group>"; };
+		042149071A91EDFE00692351 /* DropitBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropitBehavior.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,14 +86,14 @@
 			children = (
 				042148E41A91CEA400692351 /* AppDelegate.h */,
 				042148E51A91CEA400692351 /* AppDelegate.m */,
-				042148E71A91CEA400692351 /* DropItViewController.h */,
-				042148E81A91CEA400692351 /* DropItViewController.m */,
+				042148E71A91CEA400692351 /* DropitViewController.h */,
+				042148E81A91CEA400692351 /* DropitViewController.m */,
 				042148EA1A91CEA400692351 /* Main.storyboard */,
 				042148ED1A91CEA400692351 /* Images.xcassets */,
 				042148EF1A91CEA400692351 /* LaunchScreen.xib */,
 				042148E01A91CEA400692351 /* Supporting Files */,
-				042149061A91EDFE00692351 /* DropItBehavior.h */,
-				042149071A91EDFE00692351 /* DropItBehavior.m */,
+				042149061A91EDFE00692351 /* DropitBehavior.h */,
+				042149071A91EDFE00692351 /* DropitBehavior.m */,
 			);
 			path = DropIt;
 			sourceTree = "<group>";
@@ -224,8 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				042148E91A91CEA400692351 /* DropItViewController.m in Sources */,
-				042149081A91EDFE00692351 /* DropItBehavior.m in Sources */,
+				042148E91A91CEA400692351 /* DropitViewController.m in Sources */,
+				042149081A91EDFE00692351 /* DropitBehavior.m in Sources */,
 				042148E61A91CEA400692351 /* AppDelegate.m in Sources */,
 				042148E31A91CEA400692351 /* main.m in Sources */,
 			);
@@ -418,6 +418,7 @@
 				042149021A91CEA400692351 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		042149031A91CEA400692351 /* Build configuration list for PBXNativeTarget "DropItTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +427,7 @@
 				042149051A91CEA400692351 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

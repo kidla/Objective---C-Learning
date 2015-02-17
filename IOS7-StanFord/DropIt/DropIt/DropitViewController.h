@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DropItViewController : UIViewController
+@interface DropitViewController : UIViewController
 
 
 @end

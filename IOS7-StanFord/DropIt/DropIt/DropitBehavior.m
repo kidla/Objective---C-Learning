@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 Ｋ. All rights reserved.
 //
 
-#import "DropItBehavior.h"
+#import "DropitBehavior.h"
 
-@interface DropItBehavior()
+@interface DropitBehavior()
 @property (strong, nonatomic) UICollisionBehavior *collision;
 @property (strong, nonatomic) UIGravityBehavior *gravity;
 @end
-@implementation DropItBehavior
+@implementation DropitBehavior
 
 - (UICollisionBehavior *)collision {
     if (!_collision) {
