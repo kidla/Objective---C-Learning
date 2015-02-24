@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041F66DE1A9C20FC0033C420 /* BezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041F66DD1A9C20FC0033C420 /* BezierPathView.m */; };
 		042148E31A91CEA400692351 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 042148E21A91CEA400692351 /* main.m */; };
 		042148E61A91CEA400692351 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 042148E51A91CEA400692351 /* AppDelegate.m */; };
 		042148E91A91CEA400692351 /* DropitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042148E81A91CEA400692351 /* DropitViewController.m */; };
@@ -28,13 +29,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041F66DC1A9C20FC0033C420 /* BezierPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierPathView.h; sourceTree = "<group>"; };
+		041F66DD1A9C20FC0033C420 /* BezierPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierPathView.m; sourceTree = "<group>"; };
 		042148DD1A91CEA400692351 /* DropIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042148E11A91CEA400692351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042148E21A91CEA400692351 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		042148E41A91CEA400692351 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		042148E51A91CEA400692351 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		042148E71A91CEA400692351 /* DropitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropitViewController.h; sourceTree = "<group>"; };
-		042148E81A91CEA400692351 /* DropitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropitViewController.m; sourceTree = "<group>"; };
+		042148E81A91CEA400692351 /* DropitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropitViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
 		042148EB1A91CEA400692351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		042148ED1A91CEA400692351 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		042148F01A91CEA400692351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -66,6 +69,8 @@
 		042148D41A91CEA400692351 = {
 			isa = PBXGroup;
 			children = (
+				041F66DC1A9C20FC0033C420 /* BezierPathView.h */,
+				041F66DD1A9C20FC0033C420 /* BezierPathView.m */,
 				042148DF1A91CEA400692351 /* DropIt */,
 				042148F91A91CEA400692351 /* DropItTests */,
 				042148DE1A91CEA400692351 /* Products */,
@@ -226,6 +231,7 @@
 			files = (
 				042148E91A91CEA400692351 /* DropitViewController.m in Sources */,
 				042149081A91EDFE00692351 /* DropitBehavior.m in Sources */,
+				041F66DE1A9C20FC0033C420 /* BezierPathView.m in Sources */,
 				042148E61A91CEA400692351 /* AppDelegate.m in Sources */,
 				042148E31A91CEA400692351 /* main.m in Sources */,
 			);
