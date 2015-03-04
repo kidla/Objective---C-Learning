@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04204A2E1AA6BCFC009710E0 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04204A2D1AA6BCFC009710E0 /* ImageViewController.m */; };
+		04204A311AA6BD1C009710E0 /* URLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04204A301AA6BD1C009710E0 /* URLViewController.m */; };
+		04204A341AA6BE8F009710E0 /* PhotosByPhotographerCDTVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04204A331AA6BE8F009710E0 /* PhotosByPhotographerCDTVCViewController.m */; };
+		04204A371AA6E33E009710E0 /* PhotosCDTVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04204A361AA6E33E009710E0 /* PhotosCDTVCViewController.m */; };
 		042389AB1AA54D8600C658C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 042389AA1AA54D8600C658C5 /* main.m */; };
 		042389AE1AA54D8600C658C5 /* PhotomaniaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 042389AD1AA54D8600C658C5 /* PhotomaniaAppDelegate.m */; };
 		042389B11AA54D8600C658C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042389B01AA54D8600C658C5 /* ViewController.m */; };
@@ -23,6 +27,7 @@
 		042389E41AA5683900C658C5 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042389E31AA5683900C658C5 /* CoreDataTableViewController.m */; };
 		042389E71AA56B0D00C658C5 /* PhotographersCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042389E61AA56B0D00C658C5 /* PhotographersCDTVC.m */; };
 		042389EB1AA5891400C658C5 /* PhotomaniaAppDelegate+MOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 042389EA1AA5891400C658C5 /* PhotomaniaAppDelegate+MOC.m */; };
+		043F51631AA6B62700884085 /* main_ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043F51621AA6B62700884085 /* main_ipad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04204A2C1AA6BCFC009710E0 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		04204A2D1AA6BCFC009710E0 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		04204A2F1AA6BD1C009710E0 /* URLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLViewController.h; sourceTree = "<group>"; };
+		04204A301AA6BD1C009710E0 /* URLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLViewController.m; sourceTree = "<group>"; };
+		04204A321AA6BE8F009710E0 /* PhotosByPhotographerCDTVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosByPhotographerCDTVCViewController.h; sourceTree = "<group>"; };
+		04204A331AA6BE8F009710E0 /* PhotosByPhotographerCDTVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosByPhotographerCDTVCViewController.m; sourceTree = "<group>"; };
+		04204A351AA6E33E009710E0 /* PhotosCDTVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCDTVCViewController.h; sourceTree = "<group>"; };
+		04204A361AA6E33E009710E0 /* PhotosCDTVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCDTVCViewController.m; sourceTree = "<group>"; };
 		042389A51AA54D8600C658C5 /* Photomania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photomania.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042389A91AA54D8600C658C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042389AA1AA54D8600C658C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,6 +81,7 @@
 		042389E91AA5891400C658C5 /* PhotomaniaAppDelegate+MOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PhotomaniaAppDelegate+MOC.h"; sourceTree = "<group>"; };
 		042389EA1AA5891400C658C5 /* PhotomaniaAppDelegate+MOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PhotomaniaAppDelegate+MOC.m"; sourceTree = "<group>"; };
 		042389EC1AA58FD500C658C5 /* PhotoDatabaseAvailability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PhotoDatabaseAvailability.h; path = ../PhotoDatabaseAvailability.h; sourceTree = "<group>"; };
+		043F51621AA6B62700884085 /* main_ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main_ipad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +105,17 @@
 		0423899C1AA54D8600C658C5 = {
 			isa = PBXGroup;
 			children = (
+				04204A351AA6E33E009710E0 /* PhotosCDTVCViewController.h */,
+				04204A361AA6E33E009710E0 /* PhotosCDTVCViewController.m */,
+				04204A321AA6BE8F009710E0 /* PhotosByPhotographerCDTVCViewController.h */,
+				04204A331AA6BE8F009710E0 /* PhotosByPhotographerCDTVCViewController.m */,
+				04204A2F1AA6BD1C009710E0 /* URLViewController.h */,
+				04204A301AA6BD1C009710E0 /* URLViewController.m */,
+				043F51621AA6B62700884085 /* main_ipad.storyboard */,
 				042389DF1AA55EAF00C658C5 /* Photographer+Create.h */,
 				042389E01AA55EAF00C658C5 /* Photographer+Create.m */,
+				04204A2C1AA6BCFC009710E0 /* ImageViewController.h */,
+				04204A2D1AA6BCFC009710E0 /* ImageViewController.m */,
 				042389D71AA558DF00C658C5 /* Photo+Flicker.h */,
 				042389D81AA558DF00C658C5 /* Photo+Flicker.m */,
 				042389A71AA54D8600C658C5 /* Photomania */,
@@ -125,12 +148,12 @@
 				042389D21AA5503900C658C5 /* Photographer.m */,
 				042389AF1AA54D8600C658C5 /* ViewController.h */,
 				042389B01AA54D8600C658C5 /* ViewController.m */,
+				042389E51AA56B0D00C658C5 /* PhotographersCDTVC.h */,
+				042389E61AA56B0D00C658C5 /* PhotographersCDTVC.m */,
 				042389B21AA54D8600C658C5 /* Main.storyboard */,
 				042389B51AA54D8600C658C5 /* Images.xcassets */,
 				042389B71AA54D8600C658C5 /* LaunchScreen.xib */,
 				042389A81AA54D8600C658C5 /* Supporting Files */,
-				042389E51AA56B0D00C658C5 /* PhotographersCDTVC.h */,
-				042389E61AA56B0D00C658C5 /* PhotographersCDTVC.m */,
 			);
 			path = Photomania;
 			sourceTree = "<group>";
@@ -263,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				042389B41AA54D8600C658C5 /* Main.storyboard in Resources */,
+				043F51631AA6B62700884085 /* main_ipad.storyboard in Resources */,
 				042389B91AA54D8600C658C5 /* LaunchScreen.xib in Resources */,
 				042389B61AA54D8600C658C5 /* Images.xcassets in Resources */,
 			);
@@ -287,12 +311,16 @@
 				042389E71AA56B0D00C658C5 /* PhotographersCDTVC.m in Sources */,
 				042389D91AA558DF00C658C5 /* Photo+Flicker.m in Sources */,
 				042389B11AA54D8600C658C5 /* ViewController.m in Sources */,
+				04204A2E1AA6BCFC009710E0 /* ImageViewController.m in Sources */,
+				04204A371AA6E33E009710E0 /* PhotosCDTVCViewController.m in Sources */,
 				042389E11AA55EAF00C658C5 /* Photographer+Create.m in Sources */,
 				042389E41AA5683900C658C5 /* CoreDataTableViewController.m in Sources */,
 				042389AE1AA54D8600C658C5 /* PhotomaniaAppDelegate.m in Sources */,
 				042389AB1AA54D8600C658C5 /* main.m in Sources */,
+				04204A341AA6BE8F009710E0 /* PhotosByPhotographerCDTVCViewController.m in Sources */,
 				042389D01AA54DA000C658C5 /* Photomania.xcdatamodeld in Sources */,
 				042389DE1AA55ABC00C658C5 /* FlickrFetcher.m in Sources */,
+				04204A311AA6BD1C009710E0 /* URLViewController.m in Sources */,
 				042389D31AA5503900C658C5 /* Photographer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +448,7 @@
 				INFOPLIST_FILE = Photomania/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -430,6 +459,7 @@
 				INFOPLIST_FILE = Photomania/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

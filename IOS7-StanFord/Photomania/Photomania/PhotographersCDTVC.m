@@ -9,7 +9,7 @@
 #import "PhotographersCDTVC.h"
 #import "Photographer.h"
 #import "PhotoDatabaseAvailability.h"
-
+#import "PhotosByPhotographerCDTVCViewController.h"
 @implementation PhotographersCDTVC
 
 - (void)awakeFromNib
@@ -42,6 +42,38 @@
   
      cell.detailTextLabel.text = [NSString stringWithFormat:@"%d photos", (int)[photographer.photos count]];
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSIndexPath *indexPath = nil;
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
+        indexPath = [self.tableView indexPathForCell:sender];
+    }
+    
+    [self prepareViewController:segue.destinationViewController
+                       forSegue:segue.identifier
+                  fromIndexPath:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    id detailvc = [self.splitViewController.viewControllers lastObject];
+    if ([detailvc isKindOfClass:[UINavigationController class]]) {
+        detailvc = [((UINavigationController *)detailvc).viewControllers firstObject];
+        [self prepareViewController:detailvc
+                           forSegue:nil
+                      fromIndexPath:indexPath];
+
+    }
+}
+
+- (void)prepareViewController:(id)vc
+                     forSegue:(NSString *)segueIdentifer
+fromIndexPath:(NSIndexPath *)indexPath {
+    Photographer *photographer = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    if ([vc isKindOfClass:[PhotosByPhotographerCDTVCViewController class]]) {
+        PhotosByPhotographerCDTVCViewController *phVC = (PhotosByPhotographerCDTVCViewController *)vc;
+        phVC.photographer = photographer;
+    }
 }
 
 @end
