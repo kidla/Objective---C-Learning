@@ -10,6 +10,7 @@
 #import "Photographer.h"
 #import "PhotoDatabaseAvailability.h"
 #import "PhotosByPhotographerCDTVCViewController.h"
+#import "PhotosByPhotographerMapViewController.h"
 @implementation PhotographersCDTVC
 
 - (void)awakeFromNib
@@ -73,6 +74,10 @@ fromIndexPath:(NSIndexPath *)indexPath {
     if ([vc isKindOfClass:[PhotosByPhotographerCDTVCViewController class]]) {
         PhotosByPhotographerCDTVCViewController *phVC = (PhotosByPhotographerCDTVCViewController *)vc;
         phVC.photographer = photographer;
+    } else if ([vc isKindOfClass:[PhotosByPhotographerMapViewController class]]) {
+        PhotosByPhotographerMapViewController *pbpmapVC = (PhotosByPhotographerMapViewController *)vc;
+        pbpmapVC.photographer = photographer;
+        
     }
 }
 

@@ -31,6 +31,9 @@
         photo.subtitle = [photoDictionary valueForKeyPath:FLICKR_PHOTO_DESCRIPTION];
         photo.imageURL = [[FlickrFetcher URLforPhoto:photoDictionary format:FlickrPhotoFormatLarge] absoluteString];
         NSString *photographerName = [photoDictionary valueForKey:FLICKR_PHOTO_OWNER];
+        photo.latitude = @([photoDictionary[FLICKR_LATITUDE] doubleValue]);
+        photo.longitude = @([photoDictionary[FLICKR_LONGITUDE] doubleValue]);
+        photo.thumbnailURL = [[FlickrFetcher URLforPhoto:photoDictionary format:FlickrPhotoFormatSquare] absoluteString];
         photo.whoTook = [Photographer photographerWithName:photographerName inManagedObjectContext:context];
         
     }

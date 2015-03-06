@@ -2,7 +2,7 @@
 //  Photo.m
 //  Photomania
 //
-//  Created by Ｋ on 2015/3/3.
+//  Created by Ｋ on 2015/3/6.
 //  Copyright (c) 2015年 Ｋ. All rights reserved.
 //
 
@@ -12,10 +12,13 @@
 
 @implementation Photo
 
-@dynamic title;
-@dynamic subtitle;
 @dynamic imageURL;
+@dynamic subtitle;
+@dynamic title;
 @dynamic unique;
+@dynamic latitude;
+@dynamic longitude;
+@dynamic thumbnailURL;
 @dynamic whoTook;
 
 @end

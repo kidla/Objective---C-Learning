@@ -109,7 +109,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="EUb-SI-He2" kind="push" identifier="Show Photos by Photographer" id="G8N-Wg-y5k"/>
+                                    <segue destination="G01-v3-3cR" kind="push" id="KJN-iL-EgC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -123,6 +123,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jND-Gz-vIi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="693" y="-864"/>
+        </scene>
+        <!--Photos By Photographer Map View Controller-->
+        <scene sceneID="qQo-BK-iZH">
+            <objects>
+                <viewController id="G01-v3-3cR" customClass="PhotosByPhotographerMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mpV-Zn-4Nu"/>
+                        <viewControllerLayoutGuide type="bottom" id="eQd-n9-iD4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fNw-QS-T9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XYE-MP-Z75">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XYE-MP-Z75" firstAttribute="top" secondItem="fNw-QS-T9Z" secondAttribute="top" id="OCH-vO-kfU"/>
+                            <constraint firstItem="XYE-MP-Z75" firstAttribute="bottom" secondItem="eQd-n9-iD4" secondAttribute="top" id="Tnc-3y-Me9"/>
+                            <constraint firstItem="XYE-MP-Z75" firstAttribute="leading" secondItem="fNw-QS-T9Z" secondAttribute="leading" id="dia-lq-ttQ"/>
+                            <constraint firstAttribute="trailing" secondItem="XYE-MP-Z75" secondAttribute="trailing" id="rD0-Xe-YSS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2AS-F4-UXV"/>
+                    <connections>
+                        <outlet property="mapView" destination="XYE-MP-Z75" id="imb-Qo-8PW"/>
+                        <segue destination="9gM-4b-dE2" kind="show" identifier="Show Photo" id="6uX-uF-CJp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rmh-VK-qWI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149" y="-128"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="F05-uS-4RT">
@@ -157,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5WP-6K-UOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1763" y="-190"/>
+            <point key="canvasLocation" x="2901" y="-896"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="fnW-X8-2mA">
@@ -190,7 +224,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gc4-aQ-Cqe">
-                        <barButtonItem key="rightBarButtonItem" title="URL" id="x2h-eT-YGw"/>
+                        <barButtonItem key="rightBarButtonItem" title="URL" id="x2h-eT-YGw">
+                            <connections>
+                                <segue destination="je3-SS-2l9" kind="show" id="FRj-qJ-PWd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="scrollView" destination="Oso-ai-FQi" id="gba-g1-XCy"/>
@@ -199,7 +237,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUm-vY-9zi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066" y="-161"/>
+            <point key="canvasLocation" x="2268" y="-929"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="6uX-uF-CJp"/>
+    </inferredMetricsTieBreakers>
 </document>
