@@ -10,7 +10,7 @@
 #import "PhotomaniaAppDelegate+MOC.h"
 #import "FlickrFetcher.h"
 #import "Photo+Flicker.h"
-
+#import "Photographer+Create.h"
 
 // THIS FILE WANTS TO BE VERY WIDE BECAUSE IT HAS A LOT OF COMMENTS THAT ARE ATTACHED ONTO THE END OF LINES--MAKE THIS COMMENT FIT ON ONE LINE
 // (or turn off line wrapping)
@@ -119,6 +119,9 @@
 {
     _photoDatabaseContext = photoDatabaseContext;
     
+    if (photoDatabaseContext) {
+        [Photographer userInManagedObjectContext:photoDatabaseContext];
+    }
     // every time the context changes, we'll restart our timer
     // so kill (invalidate) the current one
     // (we didn't get to this line of code in lecture, sorry!)

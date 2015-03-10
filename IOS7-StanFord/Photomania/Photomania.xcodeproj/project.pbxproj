@@ -13,6 +13,8 @@
 		04204A371AA6E33E009710E0 /* PhotosCDTVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04204A361AA6E33E009710E0 /* PhotosCDTVCViewController.m */; };
 		0422FBA81AA95B0800E04B7E /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422FBA71AA95B0800E04B7E /* Photo.m */; };
 		0422FBAB1AA960F700E04B7E /* Photo+Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422FBAA1AA960F700E04B7E /* Photo+Annotation.m */; };
+		0422FCC71AAD72FE00F3DEF4 /* AddPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422FCC61AAD72FE00F3DEF4 /* AddPhotoViewController.m */; };
+		0422FCCB1AADB3AE00F3DEF4 /* UIImage+CS193p.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422FCCA1AADB3AE00F3DEF4 /* UIImage+CS193p.m */; };
 		042389AB1AA54D8600C658C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 042389AA1AA54D8600C658C5 /* main.m */; };
 		042389AE1AA54D8600C658C5 /* PhotomaniaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 042389AD1AA54D8600C658C5 /* PhotomaniaAppDelegate.m */; };
 		042389B11AA54D8600C658C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042389B01AA54D8600C658C5 /* ViewController.m */; };
@@ -56,6 +58,10 @@
 		0422FBA71AA95B0800E04B7E /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		0422FBA91AA960F700E04B7E /* Photo+Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+Annotation.h"; sourceTree = "<group>"; };
 		0422FBAA1AA960F700E04B7E /* Photo+Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+Annotation.m"; sourceTree = "<group>"; };
+		0422FCC51AAD72FE00F3DEF4 /* AddPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPhotoViewController.h; sourceTree = "<group>"; };
+		0422FCC61AAD72FE00F3DEF4 /* AddPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPhotoViewController.m; sourceTree = "<group>"; };
+		0422FCC91AADB3AE00F3DEF4 /* UIImage+CS193p.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CS193p.h"; sourceTree = "<group>"; };
+		0422FCCA1AADB3AE00F3DEF4 /* UIImage+CS193p.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CS193p.m"; sourceTree = "<group>"; };
 		042389A51AA54D8600C658C5 /* Photomania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photomania.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042389A91AA54D8600C658C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042389AA1AA54D8600C658C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -111,9 +117,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0422FCC81AADB3AE00F3DEF4 /* UIImage+CS193p */ = {
+			isa = PBXGroup;
+			children = (
+				0422FCC91AADB3AE00F3DEF4 /* UIImage+CS193p.h */,
+				0422FCCA1AADB3AE00F3DEF4 /* UIImage+CS193p.m */,
+			);
+			path = "UIImage+CS193p";
+			sourceTree = "<group>";
+		};
 		0423899C1AA54D8600C658C5 = {
 			isa = PBXGroup;
 			children = (
+				0422FCC81AADB3AE00F3DEF4 /* UIImage+CS193p */,
+				0422FCC51AAD72FE00F3DEF4 /* AddPhotoViewController.h */,
+				0422FCC61AAD72FE00F3DEF4 /* AddPhotoViewController.m */,
 				0422FBA91AA960F700E04B7E /* Photo+Annotation.h */,
 				0422FBAA1AA960F700E04B7E /* Photo+Annotation.m */,
 				04420DBD1AA86A570020AB9C /* MapKit.framework */,
@@ -322,6 +340,7 @@
 			files = (
 				042389EB1AA5891400C658C5 /* PhotomaniaAppDelegate+MOC.m in Sources */,
 				042389E71AA56B0D00C658C5 /* PhotographersCDTVC.m in Sources */,
+				0422FCCB1AADB3AE00F3DEF4 /* UIImage+CS193p.m in Sources */,
 				042389D91AA558DF00C658C5 /* Photo+Flicker.m in Sources */,
 				04420DBC1AA8682C0020AB9C /* PhotosByPhotographerMapViewController.m in Sources */,
 				042389B11AA54D8600C658C5 /* ViewController.m in Sources */,
@@ -333,6 +352,7 @@
 				042389AE1AA54D8600C658C5 /* PhotomaniaAppDelegate.m in Sources */,
 				042389AB1AA54D8600C658C5 /* main.m in Sources */,
 				04204A341AA6BE8F009710E0 /* PhotosByPhotographerCDTVCViewController.m in Sources */,
+				0422FCC71AAD72FE00F3DEF4 /* AddPhotoViewController.m in Sources */,
 				0422FBAB1AA960F700E04B7E /* Photo+Annotation.m in Sources */,
 				042389D01AA54DA000C658C5 /* Photomania.xcdatamodeld in Sources */,
 				042389DE1AA55ABC00C658C5 /* FlickrFetcher.m in Sources */,

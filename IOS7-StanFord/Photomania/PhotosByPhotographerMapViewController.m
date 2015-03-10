@@ -10,9 +10,14 @@
 #import <MapKit/MapKit.h>
 #import  "Photo.h"
 #import "ImageViewController.h"
+#import "Photographer+Create.h"
+#import "AddPhotoViewController.h"
+
 @interface PhotosByPhotographerMapViewController () <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) NSArray *photosByPhotographer;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addPhotoBarButtonItem;
+
 @end
 @implementation PhotosByPhotographerMapViewController
 
@@ -84,8 +89,30 @@
     }
 }
 
+- (IBAction)addPhoto:(UIStoryboardSegue *)segue {
+    if ([segue.sourceViewController isKindOfClass:[AddPhotoViewController class]]) {
+        AddPhotoViewController *apvc = (AddPhotoViewController *)segue.sourceViewController;
+        Photo *addedPhoto = apvc.addPhoto;
+        if (addedPhoto) {
+            [self.mapView addAnnotation:addedPhoto];
+            [self.mapView showAnnotations:@[addedPhoto] animated:YES];
+            self.photosByPhotographer = nil;
+        } else {
+            NSLog(@"AddPhotoViewController unexpectedly did not add a photo!");
+        }
+    }
+
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([sender isKindOfClass:[MKAnnotationView class]]) {
+    
+    if ([segue.destinationViewController isKindOfClass:[AddPhotoViewController class]]) {
+        AddPhotoViewController *apVC = (AddPhotoViewController *)segue.destinationViewController;
+        apVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        apVC.photographerTakingPhoto = self.photographer;
+    }
+    
+    else if ([sender isKindOfClass:[MKAnnotationView class]]) {
         [self prepareViewController:segue.destinationViewController forSegue:segue.identifier toShowAnnotation:((MKAnnotationView *)sender).annotation];
     }
 }
@@ -105,6 +132,29 @@
     _photographer = photographer;
     self.title = photographer.name;
     [self updateMapViewAnnotations];
+    [self updateAddPhotoBarButtonItem];
+}
+
+- (void)updateAddPhotoBarButtonItem {
+    if (self.addPhotoBarButtonItem) {
+        BOOL canAddPhoto = self.photographer.isUser;
+        NSMutableArray *rightBarButtonItems = [self.navigationItem.rightBarButtonItems mutableCopy];
+        if (!rightBarButtonItems) {
+            rightBarButtonItems = [[NSMutableArray alloc] init];
+        }
+    
+        NSUInteger addPhotoBarButtonItemIndex = [rightBarButtonItems indexOfObject:self.addPhotoBarButtonItem];
+        if (addPhotoBarButtonItemIndex == NSNotFound) {
+            if (canAddPhoto) {
+                [rightBarButtonItems addObject:self.addPhotoBarButtonItem];
+            }
+        } else {
+            if (!canAddPhoto) {
+                [rightBarButtonItems removeObjectAtIndex:addPhotoBarButtonItemIndex];
+            }
+        }
+        self.navigationItem.rightBarButtonItems = rightBarButtonItems;
+    }
 }
 
 - (NSArray *)photosByPhotographer {
